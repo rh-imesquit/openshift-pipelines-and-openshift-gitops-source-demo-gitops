@@ -86,7 +86,7 @@ service:
 
 route:
   enabled: true  
-  host: netcore-apps-dev.apps.opsprd.solarbr.com.br
+#  host: netcore-apps-dev.apps.opsprd.solarbr.com.br
 
 # definição de probes de health-check
 #readinessProbe:
