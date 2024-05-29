@@ -29,7 +29,7 @@ secrets:
 replicaCount: 1
 
 image:
-  nameVersion: image-registry.openshift-image-registry.svc:5000/apps-dev/netcore-sample:1.0.0
+  nameVersion: image-registry.openshift-image-registry.svc:5000/apps-dev/netcore-sample:30.0
   pullPolicy: Always
 
 imagePullSecrets: []
