@@ -13,18 +13,18 @@ app:
     enabled: false
 
 configmap:
-  enabled: true
+  enabled: false
   items:
     - name: quarkus-api-consulta-cep-config
       filePath: "files/application.properties"
       fileName: application.properties
 
-secrets:
-  - name: quarkus-api-consulta-cep-secrets
-    keys:
-      - name: EXAMPLE_DB_PASS
-        encoded: false
-        value: "admin"
+# secrets:
+#   - name: quarkus-api-consulta-cep-secrets
+#     keys:
+#       - name: EXAMPLE_DB_PASS
+#         encoded: false
+#         value: "admin"
 
 replicaCount: 1
 
@@ -57,26 +57,26 @@ ports:
 #    cpu: 10m
 #    memory: 128Mi
 
-environments:
-  - name: EXAMPLE_DB_HOST
-    value: "postgresql.databases.svc.cluster.local"
-  - name: EXAMPLE_DB_PORT
-    value: "5432"
-  - name: EXAMPLE_DB_PASS
-    valueFrom:
-      secretKeyRef:
-        name: quarkus-api-consulta-cep-secrets
-        key: EXAMPLE_DB_PASS
+# environments:
+#   - name: EXAMPLE_DB_HOST
+#     value: "postgresql.databases.svc.cluster.local"
+#   - name: EXAMPLE_DB_PORT
+#     value: "5432"
+#   - name: EXAMPLE_DB_PASS
+#     valueFrom:
+#       secretKeyRef:
+#         name: quarkus-api-consulta-cep-secrets
+#         key: EXAMPLE_DB_PASS
 
-volumes:
-  - name: quarkus-api-consulta-cep-config
-    configMap:
-      name: quarkus-api-consulta-cep-config
+# volumes:
+#   - name: quarkus-api-consulta-cep-config
+#     configMap:
+#       name: quarkus-api-consulta-cep-config
 
-volumeMounts:
-  - name: quarkus-api-consulta-cep-config
-    mountPath: "/opt/app-root/app/appsettings.json"
-    subPath: appsettings.json
+# volumeMounts:
+#   - name: quarkus-api-consulta-cep-config
+#     mountPath: "/opt/app-root/app/appsettings.json"
+#     subPath: appsettings.json
 
 service:
   type: NodePort
