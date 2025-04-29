@@ -79,7 +79,7 @@ ports:
 #     subPath: appsettings.json
 
 service:
-  type: NodePort
+  type: ClusterIP
   name: http
   port: 8080
   targetPort: 8080
