@@ -29,7 +29,7 @@ configmap:
 replicaCount: 1
 
 image:
-  nameVersion: image-registry.openshift-image-registry.svc:1.0.0:1.0.0
+  nameVersion: image-registry.openshift-image-registry.svc:1.0.1:1.0.1
   pullPolicy: Always
 
 imagePullSecrets: []
