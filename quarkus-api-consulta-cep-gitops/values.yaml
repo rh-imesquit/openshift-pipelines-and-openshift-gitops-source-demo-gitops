@@ -2,7 +2,7 @@
 
 # este arquivo pode ser utilizado como modelo para criação de outras aplicações. 
 # Os templates contidos na pasta templates podem ser customizados de acordo com cada aplicação.
-namespace: apps-dev
+namespace: apps-prd
 
 app:
   name: quarkus-api-consulta-cep
