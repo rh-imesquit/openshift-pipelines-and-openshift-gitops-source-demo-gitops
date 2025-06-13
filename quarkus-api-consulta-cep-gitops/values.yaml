@@ -29,7 +29,7 @@ configmap:
 replicaCount: 1
 
 image:
-  nameVersion: image-registry.openshift-image-registry.svc:1.0.0:1.0.0
+  nameVersion: quay.io/pipeline-tekton/quarkus-api-consulta-cep-move:1.0.0
   pullPolicy: Always
 
 imagePullSecrets: []
