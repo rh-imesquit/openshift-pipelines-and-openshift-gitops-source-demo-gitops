@@ -29,7 +29,7 @@ configmap:
 replicaCount: 1
 
 image:
-  nameVersion: quay.io/pipeline-tekton/quarkus-api-consulta-cep:1.0.0
+  nameVersion: quay.io/pipeline-tekton/quarkus-api-consulta-cep:1.0.2
   pullPolicy: Always
 
 imagePullSecrets: []
